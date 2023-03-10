@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Tc-3n-Zuj">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Review-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GestureHw8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTC-7G-54h">
+                                <rect key="frame" x="169.5" y="617" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="ClearFromSmile:" destination="qOm-7n-DCw" eventType="touchUpInside" id="OG5-3N-zdu"/>
+                                    <action selector="ClearSmile:" destination="qOm-7n-DCw" eventType="touchUpInside" id="VAR-mD-jvI"/>
+                                    <action selector="ClearTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bBf-9j-buR"/>
+                                    <action selector="IsClearTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aPo-oY-KJT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcx-QF-mn6">
+                                <rect key="frame" x="166.5" y="452" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OYX-Ct-GFC">
+                                <rect key="frame" x="123.5" y="481" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="cb8-Wx-KsS"/>
+                                    <constraint firstAttribute="height" constant="128" id="gJO-f5-N5L"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Mcx-QF-mn6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ace-QP-Gaq"/>
+                            <constraint firstItem="OYX-Ct-GFC" firstAttribute="top" secondItem="Mcx-QF-mn6" secondAttribute="bottom" constant="8" id="CXf-rN-rIB"/>
+                            <constraint firstItem="OYX-Ct-GFC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W4v-40-b0P"/>
+                            <constraint firstItem="CTC-7G-54h" firstAttribute="top" secondItem="OYX-Ct-GFC" secondAttribute="bottom" constant="8" id="lN8-kN-6M8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CTC-7G-54h" secondAttribute="bottom" constant="20" id="wpo-eF-lbK"/>
+                            <constraint firstItem="CTC-7G-54h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ymA-7U-DLu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3UT-bA-ZzB" appends="YES" id="TYK-Js-gtM"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Review" prompt="Food App" id="Uqv-mB-Yk8"/>
+                    <connections>
+                        <outlet property="Smiley" destination="OYX-Ct-GFC" id="ReS-kN-TmM"/>
+                        <outlet property="TasteLabel" destination="Mcx-QF-mn6" id="M6p-bZ-8lZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="qOm-7n-DCw" userLabel="Exit" sceneMemberID="exit"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="3UT-bA-ZzB"/>
+            </objects>
+            <point key="canvasLocation" x="1077.5999999999999" y="115.59220389805098"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h5u-yB-LFm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Tc-3n-Zuj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uAH-1R-kxn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lz7-fX-HSQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4P4-Ba-TPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+</document>
