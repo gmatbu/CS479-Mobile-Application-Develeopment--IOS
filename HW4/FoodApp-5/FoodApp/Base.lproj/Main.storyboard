@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4dB-uF-9ax">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My #1 favorite food is..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewh-0T-RXM">
+                                <rect key="frame" x="98.5" y="117" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ztn-qE-Zha">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="TLq-oe-wBj"/>
+                                    <constraint firstAttribute="height" constant="100" id="rSd-GE-tGs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxY-4A-kE6">
+                                <rect key="frame" x="164.5" y="415.5" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1o-Wn-Q4S">
+                                <rect key="frame" x="171.5" y="568" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n7q-1x-CfM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ewh-0T-RXM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3MO-2F-ZaT"/>
+                            <constraint firstItem="Ztn-qE-Zha" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5jc-Iz-sDg"/>
+                            <constraint firstItem="Ztn-qE-Zha" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="81E-KK-fu2"/>
+                            <constraint firstItem="X1o-Wn-Q4S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9e0-sJ-fDl"/>
+                            <constraint firstItem="GxY-4A-kE6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fwT-bu-LdP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X1o-Wn-Q4S" secondAttribute="bottom" constant="20" id="mSg-IL-kXg"/>
+                            <constraint firstItem="ewh-0T-RXM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="t1M-TC-WvC"/>
+                            <constraint firstItem="GxY-4A-kE6" firstAttribute="top" secondItem="Ztn-qE-Zha" secondAttribute="bottom" constant="32" id="uaq-Rf-n87"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Main" prompt="FoodApp" id="6xg-Bg-q7D">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="o4f-hz-aLG">
+                            <connections>
+                                <segue destination="pVR-2s-hcV" kind="show" identifier="AddFoodSegue" id="bMn-0g-wcd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="foodImageView" destination="Ztn-qE-Zha" id="8mY-GK-ejB"/>
+                        <outlet property="foodLabel" destination="GxY-4A-kE6" id="edQ-7B-RWl"/>
+                        <outlet property="headingLabel" destination="ewh-0T-RXM" id="orG-aM-OuR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874.39999999999998" y="138.98050974512745"/>
+        </scene>
+        <!--Add Food-->
+        <scene sceneID="HYw-ka-Qrv">
+            <objects>
+                <viewController storyboardIdentifier="AddFood" id="pVR-2s-hcV" customClass="AddFoodViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PRx-Ft-5Ie">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter name of food #N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uv2-GF-Od6">
+                                <rect key="frame" x="101" y="94" width="173" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ljq-SV-o8V">
+                                <rect key="frame" x="16" y="123" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="V3c-GQ-dR4" firstAttribute="trailing" secondItem="Ljq-SV-o8V" secondAttribute="trailing" constant="16" id="L0T-Dh-s0o"/>
+                            <constraint firstItem="Ljq-SV-o8V" firstAttribute="top" secondItem="Uv2-GF-Od6" secondAttribute="bottom" constant="8" id="QfK-Di-zvg"/>
+                            <constraint firstItem="Uv2-GF-Od6" firstAttribute="centerX" secondItem="PRx-Ft-5Ie" secondAttribute="centerX" id="f4b-UH-p2H"/>
+                            <constraint firstItem="Uv2-GF-Od6" firstAttribute="top" secondItem="V3c-GQ-dR4" secondAttribute="top" constant="16" id="ntO-tW-MOl"/>
+                            <constraint firstItem="Ljq-SV-o8V" firstAttribute="leading" secondItem="V3c-GQ-dR4" secondAttribute="leading" constant="16" id="tSL-g7-EzY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V3c-GQ-dR4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Food" prompt="FoodApp" id="JD8-4F-hw7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Rhn-b3-g6j">
+                            <connections>
+                                <segue destination="omo-V3-ZeE" kind="unwind" unwindAction="unwindFromAddFoodViewusingCancelWithSender:" id="SIf-K9-RdY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="PjE-Fd-IRS">
+                            <connections>
+                                <segue destination="omo-V3-ZeE" kind="unwind" identifier="UnwindusingSave" unwindAction="unwindFromAddFoodViewusingSaveWithSender:" id="Jol-k0-0Tg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="InputLabel" destination="Ljq-SV-o8V" id="V6W-05-dA0"/>
+                        <outlet property="nameoffood" destination="Uv2-GF-Od6" id="rAR-d9-6IU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZM-WB-xDs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="omo-V3-ZeE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1629.5999999999999" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TJw-Yq-5fj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4dB-uF-9ax" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X7W-Du-PJi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KNN-dA-H0h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgA-vC-tiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64.799999999999997" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pizza.png" width="478" height="479"/>
+    </resources>
+</document>
